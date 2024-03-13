@@ -37,6 +37,7 @@ class LoginWidget extends React.Component {
     )
       .then(handleErrors)
       .then((data) => {
+        console.log(data)
         if (data.success) {
           const params = new URLSearchParams(window.location.search);
           const redirect_url = params.get("redirect_url") || "/";
